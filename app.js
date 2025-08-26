@@ -286,7 +286,7 @@ document.addEventListener('DOMContentLoaded', () => {
     { threshold: 0.3 }
   );
   experienceItems.forEach((item, index) => {
-    item.style.opacity = '0';
+    item.style.opacity = 0;
     item.style.transform = index % 2 === 0 ? 'translateX(-50px)' : 'translateX(50px)';
     item.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
     experienceObserver.observe(item);
@@ -310,7 +310,7 @@ document.addEventListener('DOMContentLoaded', () => {
     { threshold: 0.2 }
   );
   certificationCards.forEach(card => {
-    card.style.opacity = '0';
+    card.style.opacity = 0;
     card.style.transform = 'translateY(30px) scale(0.9)';
     card.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
     certificationObserver.observe(card);
@@ -451,7 +451,7 @@ try {
 // Error Handling for Window
 // ==============================
 window.addEventListener('error', function () {
-  // Silenced by default; add console.warn if debugging
+  // Add console.warn(e.error) if debugging
 });
 
 // =======================================
