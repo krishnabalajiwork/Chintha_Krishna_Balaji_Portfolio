@@ -176,8 +176,6 @@ document.addEventListener('DOMContentLoaded', () => {
     function showError(input, message) {
       input.classList.add('error');
       input.classList.remove('success');
-
-      // Create or update error message
       let errorDiv = input.parentNode.querySelector('.error-message');
       if (!errorDiv) {
         errorDiv = document.createElement('div');
@@ -191,19 +189,12 @@ document.addEventListener('DOMContentLoaded', () => {
     function clearErrors() {
       const inputs = contactForm.querySelectorAll('.form-control');
       const errorMessages = contactForm.querySelectorAll('.error-message');
-
-      inputs.forEach(input => {
-        input.classList.remove('error', 'success');
-      });
-
-      errorMessages.forEach(error => {
-        error.classList.remove('show');
-      });
+      inputs.forEach(input => input.classList.remove('error', 'success'));
+      errorMessages.forEach(err => err.classList.remove('show'));
     }
 
     function isValidEmail(email) {
-      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      return emailRegex.test(email);
+      return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
     }
   }
 
@@ -217,7 +208,6 @@ document.addEventListener('DOMContentLoaded', () => {
       header.style.background = 'rgba(255,255,255,0.95)';
       header.style.backdropFilter = 'blur(10px)';
     } else {
-      // Use CSS variable surface if available; fallback is transparent
       header.style.background = 'var(--color-surface)';
       header.style.backdropFilter = 'blur(10px)';
     }
@@ -273,7 +263,6 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     { threshold: 0.5 }
   );
-
   skillItems.forEach(item => {
     item.style.opacity = '0';
     item.style.transform = 'translateY(20px)';
@@ -296,7 +285,6 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     { threshold: 0.3 }
   );
-
   experienceItems.forEach((item, index) => {
     item.style.opacity = '0';
     item.style.transform = index % 2 === 0 ? 'translateX(-50px)' : 'translateX(50px)';
@@ -321,7 +309,6 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     { threshold: 0.2 }
   );
-
   certificationCards.forEach(card => {
     card.style.opacity = '0';
     card.style.transform = 'translateY(30px) scale(0.9)';
@@ -414,8 +401,7 @@ document.addEventListener('DOMContentLoaded', () => {
 document.addEventListener('click', function (e) {
   const link = e.target.closest('a[href^="http"]');
   if (link && link.getAttribute('target') === '_blank') {
-    // Could add analytics tracking here if needed
-    // console.log('External link clicked:', link.href);
+    // Placeholder for analytics if needed
   }
 });
 
@@ -423,7 +409,6 @@ document.addEventListener('click', function (e) {
 // Keyboard Navigation Enhancement
 // =======================================
 document.addEventListener('keydown', function (e) {
-  // Press 'Escape' to close mobile menu
   if (e.key === 'Escape') {
     const navToggle = document.getElementById('navToggle');
     const navMenu = document.getElementById('navMenu');
@@ -456,7 +441,6 @@ function applyColorScheme() {
   }
 }
 applyColorScheme();
-
 try {
   window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', applyColorScheme);
 } catch (_) {
@@ -466,8 +450,8 @@ try {
 // ==============================
 // Error Handling for Window
 // ==============================
-window.addEventListener('error', function (e) {
-  // console.warn('An error occurred:', e.error);
+window.addEventListener('error', function () {
+  // Silenced by default; add console.warn if debugging
 });
 
 // =======================================
@@ -476,6 +460,5 @@ window.addEventListener('error', function (e) {
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', function () {
     // Placeholder for future PWA features
-    // console.log('Service Worker support detected');
   });
 }
