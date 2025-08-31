@@ -60,7 +60,11 @@ a { text-decoration: none; }
 img { max-width: 100%; height: auto; }
 
 /*=============== REUSABLE CSS CLASSES ===============*/
-.section { padding: 4rem 0 2rem; }
+.section { 
+  padding: 4rem 0 2rem;
+  position: relative; /* Added for background shapes */
+  overflow: hidden; /* Added for background shapes */
+}
 .section__title {
   font-size: var(--h2-font-size);
   margin-bottom: var(--mb-2);
@@ -138,15 +142,33 @@ img { max-width: 100%; height: auto; }
 .scroll-header { box-shadow: 0 1px 4px var(--shadow-color); }
 
 /*=============== HOME / HERO ===============*/
+.hero {
+    padding-top: 0;
+    padding-bottom: 0;
+}
 .hero__container {
-    row-gap: 2.5rem;
-    min-height: calc(100vh - var(--header-height) - 4rem);
+    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
+    z-index: 2;
 }
-.hero__content {
-    text-align: center;
+/* NEW: Decorative background shape for Hero */
+.hero__background-shape {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, var(--glow-color), transparent 60%);
+    transform: translate(-50%, -50%);
+    filter: blur(80px);
+    z-index: 1;
+}
+
+.hero__content { 
+    text-align: center; 
     max-width: 600px;
 }
 .hero__title {
@@ -176,7 +198,7 @@ img { max-width: 100%; height: auto; }
     color: var(--title-color);
     transition: transform 0.3s, color 0.3s;
 }
-.hero__social-icon:hover {
+.hero__social-icon:hover { 
     color: var(--primary-color);
     transform: translateY(-2px);
 }
@@ -194,7 +216,7 @@ img { max-width: 100%; height: auto; }
   transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
   border: 2px solid transparent;
 }
-.button:hover {
+.button:hover { 
     background-color: var(--primary-color-alt);
     transform: translateY(-3px);
     box-shadow: 0 4px 12px var(--glow-color);
@@ -230,7 +252,11 @@ img { max-width: 100%; height: auto; }
 .button--link i { transition: .3s; }
 
 /*=============== ABOUT ===============*/
-.about__container { row-gap: 2rem; }
+.about__container { 
+    row-gap: 2rem;
+    /* NEW: Center align columns vertically */
+    align-items: center; 
+}
 .about__data { text-align: center; }
 .about__info {
     display: grid;
@@ -273,7 +299,7 @@ img { max-width: 100%; height: auto; }
     flex-direction: column;
     transition: transform 0.3s, box-shadow 0.3s;
 }
-.experience__card:hover, .project__card:hover {
+.experience__card:hover, .project__card:hover { 
     transform: translateY(-5px);
     box-shadow: 0 8px 24px var(--glow-color);
 }
@@ -292,7 +318,7 @@ img { max-width: 100%; height: auto; }
 }
 .experience__card ul {
     padding-left: 1rem;
-    flex-grow: 1;
+    flex-grow: 1; /* NEW: Pushes the button to the bottom */
 }
 .experience__card li {
     position: relative;
@@ -305,8 +331,11 @@ img { max-width: 100%; height: auto; }
     left: 0;
     color: var(--primary-color);
 }
-.experience__buttons {
+.card__buttons { /* NEW: Unified button container class */
     margin-top: var(--mb-1);
+}
+.project__card p {
+    flex-grow: 1; /* NEW: Pushes the button to the bottom */
 }
 .project__header{
     display: flex;
@@ -332,16 +361,6 @@ img { max-width: 100%; height: auto; }
     border-radius: 1rem;
     font-size: var(--small-font-size);
 }
-.project__link{
-    color: var(--primary-color);
-    font-weight: var(--font-medium);
-    display: inline-flex;
-    align-items: center;
-    gap: .25rem;
-    margin-top: auto;
-}
-.project__link:hover i{ transform: translateX(.25rem); }
-.project__link i{ transition: .3s; }
 
 /*=============== SKILLS ===============*/
 .skills__container { row-gap: 2rem; }
@@ -375,7 +394,11 @@ img { max-width: 100%; height: auto; }
 }
 
 /*=============== CONTACT ===============*/
-.contact__container { row-gap: 2.5rem; }
+.contact__container { 
+    row-gap: 2.5rem;
+    /* NEW: Center align columns vertically */
+    align-items: center;
+}
 .contact__content{ text-align: center; }
 .contact__title{
     font-size: var(--h3-font-size);
@@ -445,25 +468,12 @@ img { max-width: 100%; height: auto; }
 .show-scroll{ bottom: 3rem; }
 
 /*=============== MEDIA QUERIES ===============*/
-@media screen and (max-width: 350px) {
-  .container {
-    margin-left: var(--mb-1);
-    margin-right: var(--mb-1);
-  }
-}
-
 @media screen and (min-width: 568px) {
-    .about__container{
+    .about__container, .contact__container{
         grid-template-columns: repeat(2, 1fr);
-        align-items: center;
     }
-    .about__data, .about__education{ text-align: initial; }
+    .about__data, .about__education, .contact__content { text-align: initial; }
     .projects__container{ grid-template-columns: repeat(2, 1fr); }
-    .contact__container{
-        grid-template-columns: repeat(2, 1fr);
-        align-items: center;
-    }
-    .contact__content{ text-align: initial; }
 }
 
 @media screen and (min-width: 768px) {
@@ -480,7 +490,7 @@ img { max-width: 100%; height: auto; }
   .nav__menu { margin-left: auto; }
   .section{ padding: 6rem 0 2rem; }
 
-  .skills__container{
+  .skills__container{ 
       grid-template-columns: repeat(2, 1fr);
   }
 }
