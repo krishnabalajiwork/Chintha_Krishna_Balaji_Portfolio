@@ -138,17 +138,16 @@ img { max-width: 100%; height: auto; }
 .scroll-header { box-shadow: 0 1px 4px var(--shadow-color); }
 
 /*=============== HOME / HERO ===============*/
-.hero__container { 
+.hero__container {
     row-gap: 2.5rem;
-    /* This centers the content vertically in the section */
     min-height: calc(100vh - var(--header-height) - 4rem);
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.hero__content { 
-    text-align: center; 
-    max-width: 600px; /* Constrain width for better readability */
+.hero__content {
+    text-align: center;
+    max-width: 600px;
 }
 .hero__title {
     font-size: var(--h1-font-size);
@@ -177,7 +176,7 @@ img { max-width: 100%; height: auto; }
     color: var(--title-color);
     transition: transform 0.3s, color 0.3s;
 }
-.hero__social-icon:hover { 
+.hero__social-icon:hover {
     color: var(--primary-color);
     transform: translateY(-2px);
 }
@@ -195,7 +194,7 @@ img { max-width: 100%; height: auto; }
   transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
   border: 2px solid transparent;
 }
-.button:hover { 
+.button:hover {
     background-color: var(--primary-color-alt);
     transform: translateY(-3px);
     box-shadow: 0 4px 12px var(--glow-color);
@@ -204,7 +203,6 @@ img { max-width: 100%; height: auto; }
     transform: translateY(-1px);
     box-shadow: 0 2px 8px var(--glow-color);
 }
-
 .button--outline {
   background-color: transparent;
   color: var(--primary-color);
@@ -275,7 +273,7 @@ img { max-width: 100%; height: auto; }
     flex-direction: column;
     transition: transform 0.3s, box-shadow 0.3s;
 }
-.experience__card:hover, .project__card:hover { 
+.experience__card:hover, .project__card:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 24px var(--glow-color);
 }
@@ -482,11 +480,15 @@ img { max-width: 100%; height: auto; }
   .nav__menu { margin-left: auto; }
   .section{ padding: 6rem 0 2rem; }
 
-  .skills__container{ 
+  .skills__container{
       grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media screen and (min-width: 1024px) {
   .container {
-    margin-
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .experience__container{ grid-template-columns: repeat(2, 1fr); }
+}
