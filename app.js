@@ -1,61 +1,235 @@
-/*=============== SHOW MENU ===============*/
-const navMenu = document.getElementById('navMenu'),
-      navToggle = document.getElementById('navToggle'),
-      navClose = document.getElementById('navClose')
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chintha Krishna Balaji - Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="#" class="nav__brand">Krishna Balaji</a>
+            <div class="nav__menu" id="navMenu">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#home" class="nav__link active-link">Home</a></li>
+                    <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+                    <li class="nav__item"><a href="#experience" class="nav__link">Experience</a></li>
+                    <li class="nav__item"><a href="#projects" class="nav__link">Projects</a></li>
+                    <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
+                    <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+                </ul>
+            </div>
+            <div class="nav__toggle" id="navToggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
 
-if(navToggle){
-    navToggle.addEventListener('click', () =>{
-        navMenu.classList.add('show-menu')
-    })
-}
+    <main class="main">
+        <section class="hero section" id="home">
+            <div class="hero__container container grid">
+                <div class="hero__content">
+                    <h1 class="hero__title">Chintha Krishna Balaji</h1>
+                    <h3 class="hero__subtitle">B.Tech CSE Student | AI & Machine Learning Enthusiast</h3>
+                    <p class="hero__description">
+                        Passionate about building intelligent solutions for real-world problems using Python, NLP, and TensorFlow.
+                    </p>
+                    <div class="hero__buttons">
+                        <a href="Chintha_Krishna_Balaji_Resume.pdf" download class="button button--primary">
+                            <i class="fas fa-download"></i> Download Resume
+                        </a>
+                        <a href="#contact" class="button button--outline">
+                            <i class="fas fa-paper-plane"></i> Get In Touch
+                        </a>
+                    </div>
+                </div>
+                <div class="hero__social">
+                    <a href="https://www.linkedin.com/in/chintha-krishna-balaji" target="_blank" rel="noopener" class="hero__social-icon"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/krishnabalajiwork" target="_blank" rel="noopener" class="hero__social-icon"><i class="fab fa-github"></i></a>
+                    <a href="mailto:krishnabalajiwork@gmail.com" class="hero__social-icon"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+        </section>
 
-/*=============== HIDE MENU ===============*/
-if(navMenu){ // Check if navMenu exists
-    const navLinks = navMenu.querySelectorAll('.nav__link')
-    const closeMenu = () => {
-        navMenu.classList.remove('show-menu')
-    }
-    navLinks.forEach(link => link.addEventListener('click', closeMenu))
-    
-    // Also add a close button if you have one
-    if(navClose){
-        navClose.addEventListener('click', closeMenu)
-    }
-}
+        <section class="about section" id="about">
+            <h2 class="section__title">About Me</h2>
+            <div class="about__container container grid">
+                <div class="about__data">
+                    <p>
+                        I'm a final-year Computer Science Engineering student at GITAM University with a strong foundation in software development and a passion for Artificial Intelligence. My experience includes developing scalable applications, optimizing machine learning models, and working in agile environments. I thrive on solving complex problems and continuously learning new technologies.
+                    </p>
+                    <div class="about__info">
+                        <div>
+                            <span class="about__info-title">8.81</span>
+                            <span class="about__info-name">CGPA</span>
+                        </div>
+                        <div>
+                            <span class="about__info-title">05+</span>
+                            <span class="about__info-name">Completed <br> Projects</span>
+                        </div>
+                        <div>
+                            <span class="about__info-title">02</span>
+                            <span class="about__info-name">Internship <br> Experiences</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about__education">
+                     <h3><i class="fas fa-graduation-cap"></i> Education</h3>
+                     <h4>B.Tech in Computer Science Engineering</h4>
+                     <p class="education__university">GITAM Deemed to be University, Bengaluru</p>
+                     <p class="education__duration">2022 – 2026</p>
+                </div>
+            </div>
+        </section>
 
+        <section class="experience section" id="experience">
+            <h2 class="section__title">Experience</h2>
+            <div class="experience__container container">
+                <div class="experience__card">
+                    <div class="experience__header">
+                        <h3 class="experience__title">Intern – Smart Agriculture Lab</h3>
+                        <span class="experience__company">GITAM University</span>
+                        <div class="experience__duration">May 2025 – Jun 2025</div>
+                    </div>
+                    <ul>
+                        <li>Integrated AI-based OCR systems into a distributed processing pipeline for weekly agile releases.</li>
+                        <li>Improved text extraction accuracy by 15% and reduced manual effort by 40% through algorithm optimization.</li>
+                    </ul>
+                </div>
+                 <div class="experience__card">
+                    <div class="experience__header">
+                        <h3 class="experience__title">Intern – Smart Agriculture Lab</h3>
+                        <span class="experience__company">GITAM University</span>
+                        <div class="experience__duration">Jan 2025 – Mar 2025</div>
+                    </div>
+                    <ul>
+                        <li>Built a backend plant-growth prediction system in Python and deployed real-time dashboards using Streamlit.</li>
+                        <li>Raised AI model accuracy to 85% using optimized algorithms and hyperparameter tuning.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
 
-/*=============== CHANGE BACKGROUND HEADER ===============*/
-function scrollHeader(){
-    const header = document.getElementById('header')
-    if(this.scrollY >= 80) header.classList.add('scroll-header'); else header.classList.remove('scroll-header')
-}
-window.addEventListener('scroll', scrollHeader)
+        <section class="projects section" id="projects">
+            <h2 class="section__title">Featured Projects</h2>
+            <div class="projects__container container grid">
+                <div class="project__card">
+                    <div class="project__header">
+                        <i class="fab fa-youtube project__icon"></i>
+                        <h3 class="project__title">YouTube Sentiment Analysis</h3>
+                    </div>
+                    <p>A scalable sentiment classification service for 3,000+ comments using Logistic Regression and VADER, achieving 80% accuracy.</p>
+                    <div class="project__tags">
+                        <span>Python</span><span>NLP</span><span>Streamlit</span>
+                    </div>
+                    <a href="https://test-sentiment-analysis-bts.streamlit.app/" target="_blank" rel="noopener" class="project__link">View Demo <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="project__card">
+                    <div class="project__header">
+                        <i class="fas fa-file-alt project__icon"></i>
+                        <h3 class="project__title">OCR Pipeline</h3>
+                    </div>
+                    <p>An image-to-text OCR application for documents using EasyOCR/Tesseract with a clean Streamlit interface for fast inference.</p>
+                     <div class="project__tags">
+                        <span>Python</span><span>EasyOCR</span><span>Pillow</span>
+                    </div>
+                    <a href="https://test-ocr-east.streamlit.app/" target="_blank" rel="noopener" class="project__link">View Demo <i class="fas fa-arrow-right"></i></a>
+                </div>
+                 <div class="project__card">
+                    <div class="project__header">
+                        <i class="fas fa-question-circle project__icon"></i>
+                        <h3 class="project__title">React Quiz App</h3>
+                    </div>
+                    <p>A responsive React-based quiz interface with real-time JavaScript validation, built with modern HTML/CSS best practices.</p>
+                     <div class="project__tags">
+                        <span>React</span><span>JavaScript</span><span>HTML/CSS</span>
+                    </div>
+                    <a href="https://d9n6tm.csb.app/" target="_blank" rel="noopener" class="project__link">View Demo <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </section>
 
+        <section class="skills section" id="skills">
+            <h2 class="section__title">Technical Skills</h2>
+            <div class="skills__container container grid">
+                <div class="skills__content">
+                    <h3 class="skills__title"><i class="fas fa-code"></i> Languages</h3>
+                    <div class="skills__box">
+                        <span class="skill__item">Java</span>
+                        <span class="skill__item">Python</span>
+                        <span class="skill__item">C/C++</span>
+                        <span class="skill__item">JavaScript</span>
+                    </div>
+                </div>
+                <div class="skills__content">
+                    <h3 class="skills__title"><i class="fas fa-server"></i> Backend & Databases</h3>
+                    <div class="skills__box">
+                        <span class="skill__item">Spring</span>
+                        <span class="skill__item">REST APIs</span>
+                        <span class="skill__item">MySQL</span>
+                        <span class="skill__item">PostgreSQL</span>
+                    </div>
+                </div>
+                <div class="skills__content">
+                    <h3 class="skills__title"><i class="fas fa-brain"></i> AI / ML</h3>
+                    <div class="skills__box">
+                        <span class="skill__item">TensorFlow</span>
+                        <span class="skill__item">NLP</span>
+                        <span class="skill__item">Scikit-learn</span>
+                        <span class="skill__item">Generative AI</span>
+                    </div>
+                </div>
+                <div class="skills__content">
+                    <h3 class="skills__title"><i class="fas fa-tools"></i> Tools & Fundamentals</h3>
+                    <div class="skills__box">
+                        <span class="skill__item">Git</span>
+                        <span class="skill__item">CI/CD</span>
+                        <span class="skill__item">Data Structures</span>
+                        <span class="skill__item">OOP</span>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-/*=============== SHOW SCROLL UP ===============*/ 
-function scrollUp(){
-    const scrollUp = document.getElementById('scroll-up');
-    if(this.scrollY >= 350) scrollUp.classList.add('show-scroll'); else scrollUp.classList.remove('show-scroll')
-}
-window.addEventListener('scroll', scrollUp)
+        <section class="contact section" id="contact">
+            <h2 class="section__title">Get In Touch</h2>
+            <div class="contact__container container grid">
+                <div class="contact__content">
+                    <h3 class="contact__title">Let's Connect</h3>
+                    <p class="contact__description">I'm always open to discussing new opportunities and innovative projects. Feel free to reach out!</p>
+                </div>
+                <form action="" class="contact__form">
+                     <div class="contact__form-div">
+                        <label for="name" class="contact__form-tag">Name</label>
+                        <input type="text" id="name" name="name" class="contact__form-input" placeholder="Your Name">
+                     </div>
+                     <div class="contact__form-div">
+                        <label for="email" class="contact__form-tag">Email</label>
+                        <input type="email" id="email" name="email" class="contact__form-input" placeholder="Your Email">
+                     </div>
+                     <div class="contact__form-div contact__form-area">
+                        <label for="message" class="contact__form-tag">Message</label>
+                        <textarea name="message" id="message" cols="30" rows="10" class="contact__form-input" placeholder="Your Message"></textarea>
+                     </div>
+                     <button class="button button--primary">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
 
+    <footer class="footer">
+        <div class="footer__container container">
+            <h1 class="footer__title">Chintha Krishna Balaji</h1>
+            <p>&copy; 2025. All rights reserved.</p>
+        </div>
+    </footer>
 
-/*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
-const sections = document.querySelectorAll('section[id]')
+    <a href="#" class="scrollup" id="scroll-up">
+        <i class="fas fa-arrow-up scrollup__icon"></i>
+    </a>
 
-function scrollActive(){
-    const scrollY = window.pageYOffset
-
-    sections.forEach(current =>{
-        const sectionHeight = current.offsetHeight
-        const sectionTop = current.offsetTop - 58;
-        const sectionId = current.getAttribute('id')
-
-        if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight){
-            document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.add('active-link')
-        }else{
-            document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.remove('active-link')
-        }
-    })
-}
-window.addEventListener('scroll', scrollActive)
+    <script src="app.js"></script>
+</body>
+</html>
