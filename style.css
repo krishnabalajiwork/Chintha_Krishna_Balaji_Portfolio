@@ -44,6 +44,8 @@
 *::before,
 *::after {
   box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 html {
@@ -56,7 +58,7 @@ body {
   font-size: var(--normal-font-size);
   background-color: var(--body-color);
   color: var(--text-color);
-  transition: .4s; /* For dark mode animation */
+  transition: .4s;
 }
 
 h1,h2,h3 {
@@ -66,7 +68,6 @@ h1,h2,h3 {
 
 ul {
   list-style: none;
-  padding: 0;
 }
 
 a {
@@ -101,7 +102,7 @@ img {
 }
 
 .main {
-  overflow: hidden; /* For animations */
+  overflow: hidden;
 }
 
 /*=============== HEADER ===============*/
@@ -163,6 +164,10 @@ img {
   color: var(--primary-color);
 }
 
+.active-link {
+  color: var(--primary-color);
+}
+
 /* show menu */
 .show-menu {
   top: var(--header-height);
@@ -201,6 +206,7 @@ img {
     display: flex;
     justify-content: center;
     gap: 1rem;
+    flex-wrap: wrap;
 }
 
 .hero__social {
@@ -221,7 +227,9 @@ img {
 
 /*=============== BUTTONS ===============*/
 .button {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
   background-color: var(--primary-color);
   color: #fff;
   padding: .75rem 1.5rem;
@@ -244,11 +252,6 @@ img {
     background-color: var(--primary-color);
     color: #fff;
 }
-
-.button i {
-    margin-right: var(--mb-0-5);
-}
-
 
 /*=============== ABOUT ===============*/
 .about__container {
@@ -325,6 +328,7 @@ img {
 .experience__card li{
     position: relative;
     padding-left: 1rem;
+    margin-bottom: var(--mb-0-5);
 }
 .experience__card li::before{
     content: '•';
@@ -332,7 +336,6 @@ img {
     left: 0;
     color: var(--primary-color);
 }
-
 
 /*=============== PROJECTS ===============*/
 .projects__container {
@@ -427,7 +430,6 @@ img {
     font-weight: var(--font-medium);
 }
 
-
 /*=============== CONTACT ===============*/
 .contact__container {
     row-gap: 2.5rem;
@@ -474,7 +476,6 @@ img {
     resize: none;
 }
 
-
 /*=============== FOOTER ===============*/
 .footer{
     background-color: var(--primary-color);
@@ -489,7 +490,6 @@ img {
     font-size: var(--h2-font-size);
     margin-bottom: var(--mb-0-5);
 }
-
 
 /*=============== SCROLL UP ===============*/
 .scrollup{
@@ -518,9 +518,7 @@ img {
   bottom: 3rem;
 }
 
-
 /*=============== MEDIA QUERIES ===============*/
-/* For small devices */
 @media screen and (max-width: 350px) {
   .container {
     margin-left: var(--mb-1);
@@ -528,10 +526,10 @@ img {
   }
   .hero__buttons{
       flex-direction: column;
+      align-items: center;
   }
 }
 
-/* For medium devices */
 @media screen and (min-width: 568px) {
     .about__container{
         grid-template-columns: repeat(2, 1fr);
@@ -561,8 +559,7 @@ img {
     height: calc(var(--header-height) + 1.5rem);
     column-gap: 3rem;
   }
-  .nav__toggle,
-  .nav__close {
+  .nav__toggle {
     display: none;
   }
   .nav__list {
@@ -578,6 +575,7 @@ img {
   .hero__container{
       grid-template-columns: 1fr max-content;
       align-items: center;
+      text-align: left;
   }
   .hero__content{
       text-align: initial;
@@ -585,12 +583,14 @@ img {
   .hero__buttons{
       justify-content: flex-start;
   }
+  .hero__social {
+      justify-content: flex-start;
+  }
   .skills__container{
       grid-template-columns: repeat(2, 1fr);
   }
 }
 
-/* For large devices */
 @media screen and (min-width: 1024px) {
   .container {
     margin-left: auto;
