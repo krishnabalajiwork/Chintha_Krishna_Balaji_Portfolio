@@ -1,358 +1,234 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Chintha Krishna Balaji - Portfolio</title>
-  <link rel="stylesheet" href="style.css"/>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chintha Krishna Balaji - Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- Header/Navigation -->
-  <header class="header">
-    <nav class="nav container">
-      <div class="nav__brand"><h2>Krishna Balaji</h2></div>
-      <ul class="nav__menu" id="navMenu">
-        <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
-        <li class="nav__item"><a href="#experience" class="nav__link">Experience</a></li>
-        <li class="nav__item"><a href="#projects" class="nav__link">Projects</a></li>
-        <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
-        <li class="nav__item"><a href="#certifications" class="nav__link">Certifications</a></li>
-        <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
-      </ul>
-      <button class="nav__toggle" id="navToggle" aria-label="Toggle navigation">
-        <span></span><span></span><span></span>
-      </button>
-    </nav>
-  </header>
-
-  <!-- Hero Section -->
-  <section class="hero" id="home">
-    <div class="container">
-      <div class="hero__content">
-        <h1 class="hero__title">Chintha Krishna Balaji</h1>
-        <p class="hero__subtitle">B.Tech CSE · AI/ML · NLP · TensorFlow</p>
-        <p class="hero__description">
-          Passionate about AI and machine learning for real-world problem solving, experienced in Python, NLP, and TensorFlow.
-        </p>
-        <div class="hero__cta">
-          <a href="#projects" class="btn btn--primary">View Projects</a>
-          <a href="#contact" class="btn btn--outline">Get In Touch</a>
-          <a href="Chintha_Krishna_Balaji_Resume.pdf" download class="btn btn--primary">Download Resume</a>
-          <a href="https://test-ocr-east.streamlit.app/" target="_blank" rel="noopener" class="btn btn--outline">OCR Demo</a>
-        </div>
-        <div class="hero__contact">
-          <a href="mailto:krishnabalajiwork@gmail.com" class="hero__contact-item"><span>Email</span></a>
-          <a href="https://www.linkedin.com/in/chintha-krishna-balaji" target="_blank" rel="noopener" class="hero__contact-item"><span>LinkedIn</span></a>
-          <a href="https://github.com/krishnabalajiwork" target="_blank" rel="noopener" class="hero__contact-item"><span>GitHub</span></a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- About Section -->
-  <section id="about" class="about">
-    <div class="container">
-      <h2 class="section__title">About Me</h2>
-      <div class="about__content">
-        <div class="about__text">
-          <p class="about__summary">
-            B.Tech CSE student passionate about AI, machine learning, NLP, and generative AI, with internships and projects building real-world applications.
-          </p>
-        </div>
-        <div class="about__education">
-          <div class="education-card">
-            <h3>Education</h3>
-            <h4>B.Tech in Computer Science Engineering</h4>
-            <p class="education__university">GITAM Deemed to be University, Bengaluru</p>
-            <p class="education__duration">2022 – 2026</p>
-            <p class="education__cgpa">CGPA: <strong>8.81/10.0</strong></p>
-            <div class="education__coursework">
-              <h5>Relevant Coursework:</h5>
-              <ul>
-                <li>Data Structures & Algorithms</li>
-                <li>Operating Systems</li>
-                <li>Database Management Systems</li>
-                <li>Software Design Patterns</li>
-                <li>Computer Networks</li>
-              </ul>
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="#" class="nav__brand">Krishna Balaji</a>
+            <div class="nav__menu" id="navMenu">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+                    <li class="nav__item"><a href="#experience" class="nav__link">Experience</a></li>
+                    <li class="nav__item"><a href="#projects" class="nav__link">Projects</a></li>
+                    <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
+                    <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+                </ul>
             </div>
-          </div>
-          <div class="location"><p><strong>Location:</strong> Bengaluru, Karnataka, India</p></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Experience Section -->
-  <section id="experience" class="experience">
-    <div class="container">
-      <h2 class="section__title">Experience</h2>
-      <div class="experience__timeline">
-        <div class="experience__item">
-          <div class="experience__card">
-            <div class="experience__header">
-              <h3>Intern – Smart Agriculture Lab</h3>
-              <span class="experience__duration">May 2025 – Jun 2025</span>
+            <div class="nav__toggle" id="navToggle">
+                <i class="fas fa-bars"></i>
             </div>
-            <p class="experience__company">GITAM University, Bengaluru</p>
-            <ul class="experience__achievements">
-              <li>Developed and integrated an AI-based OCR system into a distributed processing pipeline for weekly agile releases</li>
-              <li>Optimized NLP algorithms to boost text extraction accuracy by 15% and reduce manual data entry effort by 40%</li>
-              <li>Leveraged Python, TensorFlow, and CI/CD best practices to deliver robust, production-ready features</li>
-            </ul>
-            <div class="experience__links">
-              <a href="https://github.com/krishnabalajiwork/East-Model" target="_blank" rel="noopener" class="btn btn--sm btn--outline">GitHub Repo</a>
-              <a href="https://test-ocr-east.streamlit.app/" target="_blank" rel="noopener" class="btn btn--sm btn--primary">Live Demo (OCR)</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" id="home">
+            <div class="hero__container container grid">
+                <div class="hero__content">
+                    <h1 class="hero__title">Chintha Krishna Balaji</h1>
+                    <h3 class="hero__subtitle">B.Tech CSE Student | AI & Machine Learning Enthusiast</h3>
+                    <p class="hero__description">
+                        Passionate about building intelligent solutions for real-world problems using Python, NLP, and TensorFlow.
+                    </p>
+                    <div class="hero__buttons">
+                        <a href="Chintha_Krishna_Balaji_Resume.pdf" download class="button button--primary">
+                            <i class="fas fa-download"></i> Download Resume
+                        </a>
+                        <a href="#contact" class="button button--outline">
+                            <i class="fas fa-paper-plane"></i> Get In Touch
+                        </a>
+                    </div>
+                </div>
+                <div class="hero__social">
+                    <a href="https://linkedin.com/in/chintha-krishna-balaji" target="_blank" class="hero__social-icon"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/krishnabalajiwork" target="_blank" class="hero__social-icon"><i class="fab fa-github"></i></a>
+                    <a href="mailto:krishnabalajiwork@gmail.com" class="hero__social-icon"><i class="fas fa-envelope"></i></a>
+                </div>
             </div>
-          </div>
-        </div>
-        <div class="experience__item">
-          <div class="experience__card">
-            <div class="experience__header">
-              <h3>Intern – Smart Agriculture Lab</h3>
-              <span class="experience__duration">Jan 2025 – Mar 2025</span>
+        </section>
+
+        <section class="about section" id="about">
+            <h2 class="section__title">About Me</h2>
+            <div class="about__container container grid">
+                <div class="about__data">
+                    <p>
+                        I'm a final-year Computer Science Engineering student at GITAM University with a strong foundation in software development and a passion for Artificial Intelligence. My experience includes developing scalable applications, optimizing machine learning models, and working in agile environments. I thrive on solving complex problems and continuously learning new technologies.
+                    </p>
+                    <div class="about__info">
+                        <div>
+                            <span class="about__info-title">8.81</span>
+                            <span class="about__info-name">CGPA</span>
+                        </div>
+                        <div>
+                            <span class="about__info-title">05+</span>
+                            <span class="about__info-name">Completed <br> Projects</span>
+                        </div>
+                        <div>
+                            <span class="about__info-title">02</span>
+                            <span class="about__info-name">Internship <br> Experiences</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about__education">
+                     <h3><i class="fas fa-graduation-cap"></i> Education</h3>
+                     <h4>B.Tech in Computer Science Engineering</h4>
+                     <p class="education__university">GITAM Deemed to be University, Bengaluru</p>
+                     <p class="education__duration">2022 – 2026</p>
+                </div>
             </div>
-            <p class="experience__company">GITAM University, Bengaluru</p>
-            <ul class="experience__achievements">
-              <li>Developed a predictive AI backend in Python to forecast plant growth using historical and real-time sensor data</li>
-              <li>Designed and deployed interactive, real-time dashboards using Streamlit for continuous monitoring by stakeholders</li>
-              <li>Improved model accuracy to 85% through experimentation with algorithms and hyperparameter tuning</li>
-            </ul>
-            <a href="https://test-ai-hydroponics.streamlit.app/" target="_blank" rel="noopener" class="btn btn--sm btn--outline">Live Demo</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+        </section>
 
-  <!-- Projects Section -->
-  <section id="projects" class="projects">
-    <div class="container">
-      <h2 class="section__title">Featured Projects</h2>
-      <div class="projects__grid">
-        <div class="project__card">
-          <div class="project__header">
-            <h3>YouTube Comment Sentiment Analysis</h3>
-            <span class="project__type">Machine Learning Project</span>
-          </div>
-          <p class="project__description">End-to-end sentiment analysis pipeline for social media insights</p>
-          <div class="project__tech">
-            <span class="tech-tag">Python</span>
-            <span class="tech-tag">NLP</span>
-            <span class="tech-tag">Logistic Regression</span>
-            <span class="tech-tag">VADER</span>
-            <span class="tech-tag">Streamlit</span>
-          </div>
-          <ul class="project__features">
-            <li>Classified over 3,000 comments with 80% accuracy</li>
-            <li>Implemented robust text preprocessing workflow</li>
-            <li>Compared multiple NLP models for optimal performance</li>
-          </ul>
-          <div class="project__links">
-            <a href="https://test-sentiment-analysis-bts.streamlit.app/" target="_blank" rel="noopener" class="btn btn--primary btn--sm">Live Demo</a>
-          </div>
-          <p class="project__duration">Sep 2024 – Oct 2024</p>
-        </div>
-        <div class="project__card">
-          <div class="project__header">
-            <h3>Quiz Application</h3>
-            <span class="project__type">Web Development</span>
-          </div>
-          <p class="project__description">Interactive and responsive quiz application with modern UI</p>
-          <div class="project__tech">
-            <span class="tech-tag">React</span>
-            <span class="tech-tag">JavaScript</span>
-            <span class="tech-tag">HTML/CSS</span>
-            <span class="tech-tag">Component Architecture</span>
-          </div>
-          <ul class="project__features">
-            <li>Fully responsive and interactive interface</li>
-            <li>Real-time client-side validation</li>
-            <li>High performance and accessibility</li>
-          </ul>
-          <div class="project__links">
-            <a href="https://d9n6tm.csb.app/" target="_blank" rel="noopener" class="btn btn--primary btn--sm">Live Demo</a>
-          </div>
-          <p class="project__duration">Aug 2024 – Oct 2024</p>
-        </div>
-        <div class="project__card">
-          <div class="project__header">
-            <h3>OCR Pipeline (Streamlit)</h3>
-            <span class="project__type">AI · OCR</span>
-          </div>
-          <p class="project__description">Image-to-text OCR app for documents and screenshots with clean UI and fast inference.</p>
-          <div class="project__tech">
-            <span class="tech-tag">Python</span>
-            <span class="tech-tag">Streamlit</span>
-            <span class="tech-tag">EasyOCR/Tesseract</span>
-            <span class="tech-tag">Pillow</span>
-          </div>
-          <ul class="project__features">
-            <li>Uploads images (JPG/PNG) and extracts text in one click</li>
-            <li>Supports multiple OCR engines for accuracy and speed</li>
-            <li>Copyable text output and simple UX</li>
-          </ul>
-          <div class="project__links">
-            <a href="https://test-ocr-east.streamlit.app/" target="_blank" rel="noopener" class="btn btn--primary btn--sm">Live Demo</a>
-          </div>
-          <p class="project__duration">May 2025 – Jun 2025</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Skills Section -->
-  <section id="skills" class="skills">
-    <div class="container">
-      <h2 class="section__title">Technical Skills</h2>
-      <div class="skills__grid">
-        <div class="skill__category">
-          <h3>Languages</h3>
-          <div class="skill__items">
-            <span class="skill__item">Python</span>
-            <span class="skill__item">Java</span>
-            <span class="skill__item">SQL</span>
-            <span class="skill__item">JavaScript</span>
-          </div>
-        </div>
-        <div class="skill__category">
-          <h3>AI / ML</h3>
-          <div class="skill__items">
-            <span class="skill__item">TensorFlow</span>
-            <span class="skill__item">Scikit-learn</span>
-            <span class="skill__item">NLP</span>
-            <span class="skill__item">Predictive Modeling</span>
-            <span class="skill__item">Data Preprocessing</span>
-          </div>
-        </div>
-        <div class="skill__category">
-          <h3>Knowledge In</h3>
-          <div class="skill__items">
-            <span class="skill__item">Generative AI</span>
-            <span class="skill__item">LLMs</span>
-            <span class="skill__item">RAG Concepts</span>
-            <span class="skill__item">Prompt Engineering</span>
-          </div>
-        </div>
-        <div class="skill__category">
-          <h3>Backend</h3>
-          <div class="skill__items">
-            <span class="skill__item">REST APIs</span>
-            <span class="skill__item">Distributed Systems</span>
-            <span class="skill__item">Spring</span>
-            <span class="skill__item">PostgreSQL</span>
-            <span class="skill__item">MySQL</span>
-          </div>
-        </div>
-        <div class="skill__category">
-          <h3>Developer Tools</h3>
-          <div class="skill__items">
-            <span class="skill__item">Git</span>
-            <span class="skill__item">CI/CD</span>
-            <span class="skill__item">Linux CLI</span>
-            <span class="skill__item">Unit Testing</span>
-          </div>
-        </div>
-        <div class="skill__category">
-          <h3>Soft Skills</h3>
-          <div class="skill__items">
-            <span class="skill__item">Problem Solving</span>
-            <span class="skill__item">Teamwork</span>
-            <span class="skill__item">Adaptability</span>
-            <span class="skill__item">Communication</span>
-            <span class="skill__item">Time Management</span>
-            <span class="skill__item">Intellectual Curiosity</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Certifications Section -->
-  <section id="certifications" class="certifications">
-    <div class="container">
-      <h2 class="section__title">Certifications</h2>
-      <div class="certifications__grid">
-        <div class="certification__card">
-          <h3>Verizon Cloud Platform Job Simulation</h3>
-          <p class="certification__issuer">Forage</p>
-          <p class="certification__date">Jun 2025</p>
-          <a href="https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/uu47f3odrfruEWjKw/aNJGnRtgfiK5fQqcR_uu47f3odrfruEWjKw_7ZqkrDnQqphjEDhxm_1750603719770_completion_certificate.pdf" target="_blank" rel="noopener" class="btn btn--outline btn--sm">View Certificate</a>
-        </div>
-        <div class="certification__card">
-          <h3>IBM Generative AI Engineering</h3>
-          <p class="certification__issuer">IBM via Coursera</p>
-          <p class="certification__date">May 2025</p>
-          <a href="https://www.coursera.org/account/accomplishments/specialization/KJQJNHVH64SS" target="_blank" rel="noopener" class="btn btn--outline btn--sm">View Certificate</a>
-        </div>
-        <div class="certification__card">
-          <h3>Google Cloud Computing Foundations</h3>
-          <p class="certification__issuer">Google</p>
-          <p class="certification__date">Apr 2025</p>
-          <a href="https://www.credly.com/badges/e97410b8-922b-45dd-99e4-40f138735227/linked_in_profile" target="_blank" rel="noopener" class="btn btn--outline btn--sm">View Badge</a>
-        </div>
-        <div class="certification__card">
-          <h3>IBM AI Developer</h3>
-          <p class="certification__issuer">IBM via Coursera</p>
-          <p class="certification__date">Feb 2025</p>
-          <a href="https://www.coursera.org/account/accomplishments/specialization/SK2WOO54BUDT" target="_blank" rel="noopener" class="btn btn--outline btn--sm">View Certificate</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact Section -->
-  <section id="contact" class="contact">
-    <div class="container">
-      <h2 class="section__title">Get In Touch</h2>
-      <div class="contact__content">
-        <div class="contact__info">
-          <h3>Let's Connect</h3>
-          <p>I'm always interested in discussing new opportunities and innovative projects in AI/ML.</p>
-          <div class="contact__details">
-            <div class="contact__item">
-              <strong>Email:</strong>
-              <a href="mailto:krishnabalajiwork@gmail.com">krishnabalajiwork@gmail.com</a>
+        <section class="experience section" id="experience">
+            <h2 class="section__title">Experience</h2>
+            <div class="experience__container container">
+                <div class="experience__card">
+                    <div class="experience__header">
+                        <h3 class="experience__title">Intern – Smart Agriculture Lab</h3>
+                        <span class="experience__company">GITAM University</span>
+                        <div class="experience__duration">May 2025 – Jun 2025</div>
+                    </div>
+                    <ul>
+                        <li>Integrated AI-based OCR systems into a distributed processing pipeline for weekly agile releases.</li>
+                        <li>Improved text extraction accuracy by 15% and reduced manual effort by 40% through algorithm optimization.</li>
+                    </ul>
+                </div>
+                 <div class="experience__card">
+                    <div class="experience__header">
+                        <h3 class="experience__title">Intern – Smart Agriculture Lab</h3>
+                        <span class="experience__company">GITAM University</span>
+                        <div class="experience__duration">Jan 2025 – Mar 2025</div>
+                    </div>
+                    <ul>
+                        <li>Built a backend plant-growth prediction system in Python and deployed real-time dashboards using Streamlit.</li>
+                        <li>Raised AI model accuracy to 85% using optimized algorithms and hyperparameter tuning.</li>
+                    </ul>
+                </div>
             </div>
-            <div class="contact__item">
-              <strong>Phone:</strong>
-              <span>+91-7893579430</span>
+        </section>
+
+        <section class="projects section" id="projects">
+            <h2 class="section__title">Featured Projects</h2>
+            <div class="projects__container container grid">
+                <div class="project__card">
+                    <div class="project__header">
+                        <i class="fab fa-youtube project__icon"></i>
+                        <h3 class="project__title">YouTube Sentiment Analysis</h3>
+                    </div>
+                    <p>A scalable sentiment classification service for 3,000+ comments using Logistic Regression and VADER, achieving 80% accuracy.</p>
+                    <div class="project__tags">
+                        <span>Python</span><span>NLP</span><span>Streamlit</span>
+                    </div>
+                    <a href="https://test-sentiment-analysis-bts.streamlit.app/" target="_blank" class="project__link">View Demo <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="project__card">
+                    <div class="project__header">
+                        <i class="fas fa-file-alt project__icon"></i>
+                        <h3 class="project__title">OCR Pipeline</h3>
+                    </div>
+                    <p>An image-to-text OCR application for documents using EasyOCR/Tesseract with a clean Streamlit interface for fast inference.</p>
+                     <div class="project__tags">
+                        <span>Python</span><span>EasyOCR</span><span>Pillow</span>
+                    </div>
+                    <a href="https://test-ocr-east.streamlit.app/" target="_blank" class="project__link">View Demo <i class="fas fa-arrow-right"></i></a>
+                </div>
+                 <div class="project__card">
+                    <div class="project__header">
+                        <i class="fas fa-question-circle project__icon"></i>
+                        <h3 class="project__title">React Quiz App</h3>
+                    </div>
+                    <p>A responsive React-based quiz interface with real-time JavaScript validation, built with modern HTML/CSS best practices.</p>
+                     <div class="project__tags">
+                        <span>React</span><span>JavaScript</span><span>HTML/CSS</span>
+                    </div>
+                    <a href="https://d9n6tm.csb.app/" target="_blank" class="project__link">View Demo <i class="fas fa-arrow-right"></i></a>
+                </div>
             </div>
-            <div class="contact__item">
-              <strong>Location:</strong>
-              <span>Bengaluru, Karnataka, India</span>
+        </section>
+
+        <section class="skills section" id="skills">
+            <h2 class="section__title">Technical Skills</h2>
+            <div class="skills__container container grid">
+                <div class="skills__content">
+                    <h3 class="skills__title"><i class="fas fa-code"></i> Languages</h3>
+                    <div class="skills__box">
+                        <span class="skill__item">Java</span>
+                        <span class="skill__item">Python</span>
+                        <span class="skill__item">C/C++</span>
+                        <span class="skill__item">JavaScript</span>
+                    </div>
+                </div>
+                <div class="skills__content">
+                    <h3 class="skills__title"><i class="fas fa-server"></i> Backend & Databases</h3>
+                    <div class="skills__box">
+                        <span class="skill__item">Spring</span>
+                        <span class="skill__item">REST APIs</span>
+                        <span class="skill__item">MySQL</span>
+                        <span class="skill__item">PostgreSQL</span>
+                    </div>
+                </div>
+                <div class="skills__content">
+                    <h3 class="skills__title"><i class="fas fa-brain"></i> AI / ML</h3>
+                    <div class="skills__box">
+                        <span class="skill__item">TensorFlow</span>
+                        <span class="skill__item">NLP</span>
+                        <span class="skill__item">Scikit-learn</span>
+                        <span class="skill__item">Generative AI</span>
+                    </div>
+                </div>
+                <div class="skills__content">
+                    <h3 class="skills__title"><i class="fas fa-tools"></i> Tools & Fundamentals</h3>
+                    <div class="skills__box">
+                        <span class="skill__item">Git</span>
+                        <span class="skill__item">CI/CD</span>
+                        <span class="skill__item">Data Structures</span>
+                        <span class="skill__item">OOP</span>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="contact__social">
-            <a href="https://www.linkedin.com/in/chintha-krishna-balaji" target="_blank" rel="noopener" class="btn btn--outline">LinkedIn</a>
-            <a href="https://github.com/krishnabalajiwork" target="_blank" rel="noopener" class="btn btn--outline">GitHub</a>
-          </div>
+        </section>
+
+        <section class="contact section" id="contact">
+            <h2 class="section__title">Get In Touch</h2>
+            <div class="contact__container container grid">
+                <div class="contact__content">
+                    <h3 class="contact__title">Let's Connect</h3>
+                    <p class="contact__description">I'm always open to discussing new opportunities and innovative projects. Feel free to reach out!</p>
+                </div>
+                <form action="" class="contact__form">
+                     <div class="contact__form-div">
+                        <label for="name" class="contact__form-tag">Name</label>
+                        <input type="text" id="name" name="name" class="contact__form-input" placeholder="Your Name">
+                     </div>
+                     <div class="contact__form-div">
+                        <label for="email" class="contact__form-tag">Email</label>
+                        <input type="email" id="email" name="email" class="contact__form-input" placeholder="Your Email">
+                     </div>
+                     <div class="contact__form-div contact__form-area">
+                        <label for="message" class="contact__form-tag">Message</label>
+                        <textarea name="message" id="message" cols="30" rows="10" class="contact__form-input" placeholder="Your Message"></textarea>
+                     </div>
+                     <button class="button button--primary">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__container container">
+            <h1 class="footer__title">Chintha Krishna Balaji</h1>
+            <p>&copy; 2025. All rights reserved.</p>
         </div>
-        <form class="contact__form" id="contactForm">
-          <div class="form-group">
-            <label for="name" class="form-label">Name</label>
-            <input type="text" id="name" name="name" class="form-control" required/>
-          </div>
-          <div class="form-group">
-            <label for="email" class="form-label">Email</label>
-            <input type="email" id="email" name="email" class="form-control" required/>
-          </div>
-          <div class="form-group">
-            <label for="message" class="form-label">Message</label>
-            <textarea id="message" name="message" rows="5" class="form-control" required></textarea>
-          </div>
-          <button type="submit" class="btn btn--primary btn--full-width">Send Message</button>
-        </form>
-      </div>
-    </div>
-  </section>
+    </footer>
 
-  <footer class="footer">
-    <div class="container">
-      <p>&copy; 2025 Chintha Krishna Balaji. All rights reserved.</p>
-    </div>
-  </footer>
+    <a href="#" class="scrollup" id="scroll-up">
+        <i class="fas fa-arrow-up scrollup__icon"></i>
+    </a>
 
-  <script src="app.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>
