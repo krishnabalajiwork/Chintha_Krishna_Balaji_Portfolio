@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+    <div class="custom-cursor"></div>
+
     <header class="header" id="header">
         <nav class="nav container">
             <a href="#" class="nav__brand">Krishna Balaji</a>
@@ -30,12 +32,16 @@
     <main class="main">
         <section class="hero section" id="home">
             <div class="hero__container container grid">
-                <div class="hero__img-container">
-                    <img src="your-actual-image-url.jpg" alt="Chintha Krishna Balaji" class="hero__img">
+                <div class="hero__monogram">
+                    <svg width="250" height="250" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path class="svg-elem-1" d="M40 160V40H100" stroke="hsl(250, 69%, 61%)" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path class="svg-elem-2" d="M100 100H160L100 160H160" stroke="hsl(250, 69%, 61%)" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path class="svg-elem-3" d="M100 40H160L130 70L160 100H100" stroke="hsl(250, 69%, 61%)" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
                 </div>
                 <div class="hero__content">
                     <h1 class="hero__title">Chintha Krishna Balaji</h1>
-                    <h3 class="hero__subtitle">B.Tech CSE Student | AI & Machine Learning Enthusiast</h3>
+                    <h3 class="hero__subtitle">AI & Machine Learning Engineer</h3>
                     <p class="hero__description">
                         Passionate about building intelligent solutions for real-world problems using Python, NLP, and TensorFlow.
                     </p>
@@ -46,11 +52,6 @@
                         <a href="#contact" class="button button--outline">
                             <i class="fas fa-paper-plane"></i> Get In Touch
                         </a>
-                    </div>
-                    <div class="hero__social">
-                        <a href="https://linkedin.com/in/chintha-krishna-balaji" target="_blank" rel="noopener" class="hero__social-icon"><i class="fab fa-linkedin"></i></a>
-                        <a href="https://github.com/krishnabalajiwork" target="_blank" rel="noopener" class="hero__social-icon"><i class="fab fa-github"></i></a>
-                        <a href="mailto:krishnabalajiwork@gmail.com" class="hero__social-icon"><i class="fas fa-envelope"></i></a>
                     </div>
                 </div>
             </div>
@@ -65,15 +66,15 @@
                     </p>
                     <div class="about__info">
                         <div>
-                            <span class="about__info-title">8.81</span>
+                            <span class="about__info-title" data-goal="8.81">0</span>
                             <span class="about__info-name">CGPA</span>
                         </div>
                         <div>
-                            <span class="about__info-title">02+</span>
+                            <span class="about__info-title" data-goal="4">0+</span>
                             <span class="about__info-name">Completed <br> Projects</span>
                         </div>
                         <div>
-                            <span class="about__info-title">02</span>
+                            <span class="about__info-title" data-goal="2">0</span>
                             <span class="about__info-name">Internship <br> Experiences</span>
                         </div>
                     </div>
@@ -90,7 +91,7 @@
         <section class="experience section" id="experience">
             <h2 class="section__title">Experience</h2>
             <div class="experience__container container">
-                <div class="experience__card">
+                <div class="experience__card animate-on-scroll">
                     <div class="experience__header">
                         <h3 class="experience__title">Intern – Smart Agriculture Lab</h3>
                         <span class="experience__company">GITAM University</span>
@@ -106,7 +107,7 @@
                         </a>
                     </div>
                 </div>
-                 <div class="experience__card">
+                 <div class="experience__card animate-on-scroll">
                     <div class="experience__header">
                         <h3 class="experience__title">Intern – Smart Agriculture Lab</h3>
                         <span class="experience__company">GITAM University</span>
@@ -114,7 +115,7 @@
                     </div>
                     <ul>
                         <li>Built backend plant-growth prediction system in Python.</li>
-                        <li>Deployed real-time dashboards using Streamlit for 24x7 access.</li>
+                        <li>Deployed real-time dashboards using Streamlit and raised AI model accuracy to 85%.</li>
                     </ul>
                     <div class="experience__buttons">
                         <a href="https://test-ai-hydroponics.streamlit.app/" target="_blank" rel="noopener" class="button button--link">
@@ -128,7 +129,7 @@
         <section class="projects section" id="projects">
             <h2 class="section__title">Featured Projects</h2>
             <div class="projects__container container grid">
-                <div class="project__card">
+                <div class="project__card animate-on-scroll">
                     <div class="project__header">
                         <i class="fas fa-seedling project__icon"></i>
                         <h3 class="project__title">FarmAI Knowledge Assistant</h3>
@@ -139,7 +140,7 @@
                     </div>
                     <a href="https://farmai-assistant.streamlit.app/" target="_blank" rel="noopener" class="project__link">View Demo <i class="fas fa-arrow-right"></i></a>
                 </div>
-                <div class="project__card">
+                <div class="project__card animate-on-scroll">
                     <div class="project__header">
                         <i class="fab fa-youtube project__icon"></i>
                         <h3 class="project__title">YouTube Sentiment Analysis</h3>
@@ -154,46 +155,16 @@
         </section>
 
         <section class="skills section" id="skills">
-            <h2 class="section__title">Technical Skills</h2>
-            <div class="skills__container container grid">
-                <div class="skills__content">
-                    <h3 class="skills__title"><i class="fas fa-code"></i> Languages</h3>
-                    <div class="skills__box">
-                        <span class="skill__item">Python</span>
-                        <span class="skill__item">Java</span>
-                        <span class="skill__item">SQL</span>
-                        <span class="skill__item">JavaScript</span>
-                    </div>
-                </div>
-                <div class="skills__content">
-                    <h3 class="skills__title"><i class="fas fa-brain"></i> AI / ML</h3>
-                    <div class="skills__box">
-                        <span class="skill__item">TensorFlow</span>
-                        <span class="skill__item">Scikit-learn</span>
-                        <span class="skill__item">NLP</span>
-                        <span class="skill__item">Generative AI</span>
-                        <span class="skill__item">RAG</span>
-                    </div>
-                </div>
-                <div class="skills__content">
-                    <h3 class="skills__title"><i class="fas fa-server"></i> Backend & Tools</h3>
-                    <div class="skills__box">
-                        <span class="skill__item">REST APIs</span>
-                        <span class="skill__item">Spring</span>
-                        <span class="skill__item">MySQL</span>
-                        <span class="skill__item">Git</span>
-                        <span class="skill__item">CI/CD</span>
-                    </div>
-                </div>
-                <div class="skills__content">
-                    <h3 class="skills__title"><i class="fas fa-handshake"></i> Soft Skills</h3>
-                    <div class="skills__box">
-                        <span class="skill__item">Teamwork</span>
-                        <span class="skill__item">Communication</span>
-                        <span class="skill__item">Problem-Solving</span>
-                        <span class="skill__item">Adaptability</span>
-                        <span class="skill__item">Time Management</span>
-                    </div>
+            <h2 class="section__title">My Toolkit</h2>
+            <div class="skills__container container">
+                <div class="skills__logos">
+                    <div class="skill__logo-item" title="Python"><img src="https://www.vectorlogo.zone/logos/python/python-icon.svg" alt="Python"></div>
+                    <div class="skill__logo-item" title="Java"><img src="https://www.vectorlogo.zone/logos/java/java-icon.svg" alt="Java"></div>
+                    <div class="skill__logo-item" title="TensorFlow"><img src="https://www.vectorlogo.zone/logos/tensorflow/tensorflow-icon.svg" alt="TensorFlow"></div>
+                    <div class="skill__logo-item" title="Scikit-learn"><img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg" alt="Scikit-learn"></div>
+                    <div class="skill__logo-item" title="SQL"><img src="https://www.vectorlogo.zone/logos/mysql/mysql-icon.svg" alt="SQL"></div>
+                    <div class="skill__logo-item" title="Git"><img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="Git"></div>
+                    <div class="skill__logo-item" title="Spring"><img src="https://www.vectorlogo.zone/logos/springio/springio-icon.svg" alt="Spring"></div>
                 </div>
             </div>
         </section>
