@@ -289,7 +289,13 @@ img { max-width: 100%; height: auto; }
     left: 0;
     color: var(--primary-color);
 }
-.project__card:hover { transform: translateY(-.25rem); transition: .3s; }
+.experience__buttons {
+    margin-top: var(--mb-1);
+}
+.project__card {
+    transition: .3s;
+}
+.project__card:hover { transform: translateY(-.25rem); }
 .project__header{
     display: flex;
     align-items: center;
@@ -305,8 +311,7 @@ img { max-width: 100%; height: auto; }
     display: flex;
     flex-wrap: wrap;
     gap: .5rem;
-    margin-top: var(--mb-1);
-    margin-bottom: var(--mb-1);
+    margin: var(--mb-1) 0;
 }
 .project__tags span{
     background-color: var(--primary-color-alt);
@@ -321,6 +326,7 @@ img { max-width: 100%; height: auto; }
     display: inline-flex;
     align-items: center;
     gap: .25rem;
+    margin-top: auto; /* Pushes the link to the bottom */
 }
 .project__link:hover i{ transform: translateX(.25rem); }
 .project__link i{ transition: .3s; }
