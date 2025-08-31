@@ -306,6 +306,8 @@ img {
     padding: 1.5rem;
     border-radius: .5rem;
     box-shadow: 0 4px 12px var(--shadow-color);
+    display: flex;
+    flex-direction: column;
 }
 .experience__header{
     margin-bottom: var(--mb-1);
@@ -324,6 +326,7 @@ img {
 }
 .experience__card ul{
     padding-left: 1rem;
+    flex-grow: 1;
 }
 .experience__card li{
     position: relative;
@@ -335,6 +338,26 @@ img {
     position: absolute;
     left: 0;
     color: var(--primary-color);
+}
+/* New style for buttons */
+.experience__buttons {
+    margin-top: var(--mb-1);
+}
+.button--link {
+    padding: 0;
+    color: var(--primary-color);
+    background: none;
+    font-weight: var(--font-medium);
+}
+.button--link:hover {
+    background: none;
+    color: var(--primary-color-alt);
+}
+.button--link:hover i {
+    transform: translateX(.25rem);
+}
+.button--link i {
+    transition: .3s;
 }
 
 /*=============== PROJECTS ===============*/
