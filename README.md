@@ -22,11 +22,6 @@ Check out my portfolio website here:
 
 ---
 
-## Projects
-
-- **YouTube Comment Sentiment Analysis**: End-to-end sentiment analysis pipeline analyzing over 3,000 comments with 80% accuracy.
-- **Quiz Application**: Responsive React-based quiz app with real-time validation and interactive UI.
-
 For detailed descriptions and live demos of projects, visit my website.
 
 ---
