@@ -528,3 +528,27 @@ img { max-width: 100%; height: auto; }
 .contact-email a:hover {
   color: var(--primary-color-alt);
 }
+.card__buttons-row {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+.card__buttons-row .left {
+  justify-content: flex-start;
+}
+.card__buttons-row .right {
+  justify-content: flex-end;
+}
+.card__buttons-row .button {
+  min-width: 42%;
+  text-align: center;
+}
+@media (max-width: 600px) {
+  .card__buttons-row {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .card__buttons-row .button {
+    min-width: 100%;
+  }
+}
