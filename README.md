@@ -9,7 +9,7 @@ I am a B.Tech Computer Science Engineering student passionate about artificial i
 ## About Me
 
 - B.Tech CSE student at GITAM University, Bengaluru (2022-2026)  
-- Strong interest in AI, ML, NLP, and generative AI  
+- Strong interest in AI, ML, NLP, RAG, and generative AI  
 - Experienced in Python, TensorFlow, React, and web development  
 - Recent internships focusing on AI-driven agriculture solutions 
 
