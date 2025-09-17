@@ -502,3 +502,16 @@ img { max-width: 100%; height: auto; }
   }
   .experience__container{ grid-template-columns: repeat(2, 1fr); }
 }
+/* New simple email contact section */
+.contact-email {
+  text-align: center;
+  padding: 2rem 0;
+}
+.contact-email a {
+  color: var(--primary-color);
+  font-weight: var(--font-semi-bold);
+  text-decoration: underline;
+}
+.contact-email a:hover {
+  color: var(--primary-color-alt);
+}
