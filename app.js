@@ -8,6 +8,7 @@ if (navToggle) {
     });
 }
 
+
 /*=============== REMOVE MENU ON LINK CLICK ===============*/
 const navLinks = document.querySelectorAll('.nav__link');
 
